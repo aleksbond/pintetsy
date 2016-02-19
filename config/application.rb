@@ -10,11 +10,14 @@ require "action_mailer/railtie"
 require "action_view/railtie"
 require "sprockets/railtie"
 # require "rails/test_unit/railtie"
+require 'etsy'
+require 'pinterest-api'
 
 # Require the gems listed in Gemfile, including any gems
 # you've limited to :test, :development, or :production.
 Bundler.require(*Rails.groups)
 
+PIN_ACCESS_TOKEN = '4818646317318287322'
 module Pintetsy
   class Application < Rails::Application
     # Settings in config/environments/* take precedence over those specified here.
@@ -28,5 +31,7 @@ module Pintetsy
     # The default locale is :en and all translations from config/locales/*.rb,yml are auto loaded.
     # config.i18n.load_path += Dir[Rails.root.join('my', 'locales', '*.{rb,yml}').to_s]
     # config.i18n.default_locale = :de
+    Etsy.protocol = "https"
+    Etsy.api_key = 'yewk9860juq5rjo4u42q33lq'
   end
 end
