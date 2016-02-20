@@ -17,7 +17,6 @@ require 'pinterest-api'
 # you've limited to :test, :development, or :production.
 Bundler.require(*Rails.groups)
 
-PIN_ACCESS_TOKEN = '4818646317318287322'
 module Pintetsy
   class Application < Rails::Application
     # Settings in config/environments/* take precedence over those specified here.
