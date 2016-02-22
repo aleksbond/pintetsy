@@ -17,7 +17,14 @@
             <img src=<%= listing.item_image %> class="img-circle">
           </div>
           <div class="span8">
-            <h3><%= listing.title %></h3>
+            <h3><a href=<%= listing.url %> ><%= listing.title %></a></h3>
+            <ul>
+              <li><strong>Price:</strong> $<%= listing.price %></li>
+              <li><strong>Average Rating:</strong> <%= listing.feedback["score"] %>%</li>
+              <li><strong>Total Sales:</strong> <%= listing.feedback["count"] %></li>
+              <li><strong>Favorites:</strong> <%= listing.num_favorers %></li>
+              <li><strong>Shop Owner:</strong> <%= listing.shop_owner %></li>
+            </ul>
           </div>
         </div>
       <% end %>
