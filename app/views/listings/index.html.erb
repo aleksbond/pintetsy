@@ -1,2 +1,26 @@
-<h1>Listings#index</h1>
-<p>Find me in app/views/listings/index.html.erb</p>
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Bootstrap 101 Template</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Bootstrap -->
+    <link href="stylesheets/bootstrap.min.css" rel="stylesheet" media="screen">
+  </head>
+  <body>
+    <script src="http://code.jquery.com/jquery.js"></script>
+    <script src="javascripts/bootstrap.min.js"></script>
+    <div class="container">
+      <div class="page-header"><h1>Pintetsy</h1></div>
+      <% @listings.each do |listing| %>
+        <div class="row listing">
+          <div class="span4">
+            <img src=<%= listing.item_image %> class="img-circle">
+          </div>
+          <div class="span8">
+            <h3><%= listing.title %></h3>
+          </div>
+        </div>
+      <% end %>
+    </div>
+  </body>
+</html>
